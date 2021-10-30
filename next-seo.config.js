@@ -11,7 +11,7 @@ const defaultSEOConfig = {
     description: "A website that tells you about me, showcases my work and has some fun hidden treats!",
     images: [
       {
-        url: "https://daggy.tech/daggy_big.png",
+        url: "https://www.daggy.tech/daggy_big.png",
         height: 1024,
         width: 1024,
         alt: "png",
