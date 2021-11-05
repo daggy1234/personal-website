@@ -5,7 +5,6 @@ import {
   Flex,
   Image,
   HStack,
-  SimpleGrid,
   Text,
   TypographyProps,
   useBreakpointValue,
@@ -92,22 +91,24 @@ const ContentBox = ({
       >
         {description}
       </Flex>
-      <SimpleGrid
+      <Box
         columns={5}
         mt={6}
         fontWeight="600"
         opacity="0.7"
         spacing={1}
         fontSize="lg"
-        maxW={{ base: "sm", lg: "lg" }}
+        maxW={{ base: "sm", lg: "sm" }}
         alignItems={align}
         textAlign={align}
         alignSelf={fa}
       >
         {tags.map((value) => (
-          <Text isTruncated>{value}</Text>
+          <Text px={2} display="inline-block" isTruncated>
+            {value}
+          </Text>
         ))}
-      </SimpleGrid>
+      </Box>
       <HStack
         fontWeight="600"
         opacity="0.7"
@@ -129,7 +130,7 @@ interface FeaturedProjectProps {
   description: string;
   textc: string;
   reversed: boolean;
-  image: string;
+  images: string[];
   alt: string;
   tags: string[];
   link_icons: IconLinkProps[];
@@ -143,7 +144,7 @@ function FeaturedProject(props: FeaturedProjectProps) {
     name,
     description,
     textc,
-    image,
+    images,
     tags,
     alt,
     link_icons,
@@ -158,12 +159,13 @@ function FeaturedProject(props: FeaturedProjectProps) {
     xl: false,
   });
   const align = reversed ? "flex-end" : "flex-start";
+  const image = useColorModeValue(images[0], images[1]);
   if (isMobile) {
     return (
       <Flex
         marginY="10%"
         pos="relative"
-        height="500px"
+        height="600px"
         textAlign={reversed ? "right" : "left"}
         alignItems={reversed ? "right" : "left"}
       >
@@ -192,19 +194,20 @@ function FeaturedProject(props: FeaturedProjectProps) {
             {name}
           </Heading>
           <Text textColor="white">{description}</Text>
-          <SimpleGrid
+          <Box
             mt={6}
-            spacing={1}
-            columns={3}
             alignSelf={align}
             color="white"
             alignItems="center"
             justifyContent="center"
           >
-            {tags.map((value) => (
-              <Text isTruncated>{value}</Text>
+            {tags.map((value, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <Text key={index} px={2} display="inline-block" isTruncated>
+                {value}
+              </Text>
             ))}
-          </SimpleGrid>
+          </Box>
           <Flex
             mt={6}
             alignSelf={align}

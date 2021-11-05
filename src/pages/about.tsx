@@ -130,9 +130,7 @@ const About = () => {
         </Heading>
         <Box marginY="5%">
           <TextImage
-            text={
-              "I'm a 17 year old high schooler from Bangalore. I grew up in Chennai, Delhi and Gurgaon before noving to Bangalore. I'm hindu and buddhist and generally enjoy Computer Science and Econ. I've always been fascinated with Science and Math, be it through topping my class in elementary school or qualifying for the top 25 nationally in olympiads. With that intrest in STEM, my dad encouraged me to start coding early and I initially considered it a fun activity. My journey intensified in the 8th Grade when I left my unconevntional Experiential learning school in Gurgaon to join NAFL in Bangalore. The stem culture here was awesome, and I developed a great apppreciation for Electronics and Programming. I spent a ton of time tinkering with electronics, working with microproccessors and circuits to make fun projects. As an IGCSE student I explored interesting CS theory like Logic gates and  Image Optimization Algorithims. With my growing knowledge of python, making projects was fun"
-            }
+            text="I'm  a 17-year-old high school kid from Bangalore. I grew up in Chennai,  Delhi and Gurgaon before moving to Bangalore. I'm Hindu and Buddhist, and  generally enjoy Computer Science and Econ. I've always been fascinated  with Science and Maths, be it through topping my class in elementary  school or qualifying for the top 25 in Olympiads. With that  interest in STEM, my dad encouraged me to start coding early, and I  considered it a fun activity. My journey pivoted in the  8th Grade when I left my unconventional Experiential learning school in  Gurgaon to join NAFL in Bangalore. The stem culture here was awesome,  and I developed a great appreciation for Electronics and Programming. I  spent a ton of time tinkering with electronics, working with  microprocessors and circuits to make fun projects. As an IGCSE student I  explored interesting CS theory like Logic gates and Image Optimization  Algorithms. With my growing knowledge of python, making projects was  fun."
             image="/dagbot.png"
             height={600}
             cw="60%"
@@ -141,7 +139,7 @@ const About = () => {
             reverse={false}
           />
           <TextImage
-            text="2020 threw a curveball. I watched summer plans evaporate as I looked for hobbies to fill time. A reddit community talked about discord bot development, and intrigued I tried my hand. I instantly fell in love and slowly drove headfirst into the programming rabbit hole. Soon I spent all my free time making websites, bots, and more. I started a startup, volunteered for NGO's and even did a few internships and freelance work. I was blown away by what I could make with code. Old intrests like pokemon, crypto and f1 fell into my programming projects. I knew I had found what I was passionate about, and I ran with that! The Open source community was so powerful and all of the amazing people I've met on github have inspired me to do more. "
+            text="2020  threw a curveball. I watched summer plans dissapear as I looked for  hobbies to fill time. A Reddit community talked about discord bot  development, and intrigued, I dove in. I instantly fell in love  and slowly drove head first into the programming rabbit hole. Soon I  spent all my free time making websites, bots, and more. I started a  startup, volunteered for NGO's and even did a few internships and  freelance work. I was blown away by what I could make with code. Old  interests like Pokémon, crypto and f1 fell into my programming projects.  I knew I had found what I was passionate about, and I ran with that!  The Open-source community was so powerful, and all the amazing people  I've met on GitHub have inspired me to do more. "
             image="/gh.png"
             alt="Github homescreen"
             reverse
@@ -150,7 +148,7 @@ const About = () => {
             width={799}
           />
           <TextImage
-            text="Apart from programming, I'm a passionate environmentalist. I've collected over 120kgs+ of ewaste for recycling and developed a software solution to help people find ewaste centres. I'm into MUN, having founded NAFL's MUN club and winnibg the Oxford MUN Singapore. As a self-procclaimed YA novel afficiando, I can tear through a teen novel no matter how 'cringe' and still love it! I'm also a passionate member of my school book club, where I love the discussions we have on literature, phiolosphy, society and femminism. On the left is my favourite book I've ever read Paper Towns by John Green, its a novel that I can always read when I'm in a bad mood."
+            text="Apart  from programming, I'm a passionate environmentalist. I've collected  over 120kgs+ of e-waste for recycling and developed a software solution  to help people find e-waste centres. I'm into MUN, having founded NAFL's  MUN club and winning the Oxford MUN Singapore. As a self-proclaimed YA  novel aficionado, I can tear through a teen novel no matter how 'cringe'  and still love it! I'm also a passionate member of my school book club,  where I love the discussions we have on literature, philosophy,  society, and feminism. On the left is my favourite book: Paper Towns by John Green, it's a novel that I can always read when I'm  in a bad mood.."
             image="/papertowns.jpg"
             alt="Github homescreen"
             cw="50%"
@@ -159,7 +157,7 @@ const About = () => {
             width={162}
           />
           <TextImage
-            text="For unwinding I love making memes to spread laughter but also start discussios on issues. I also run a fountainpen youtube/instagram page where I share my pens and 101 guides on how to take care of your fountainpens! As a huge f1 fan, I watch every race no matter the time or date. "
+            text="For unwinding, I love making memes to spread laughter but also start discussions on issues. Currently have over 80000 Reddit Karma.  I also run a fountain pen YouTube Channel, and Instagram page where I share photos and guides on pen maintenance! Fountain Pens are a huge passion of mine, and as a member of the Indian Fountain Pen Association, I'm happy to promote the hobby.  As a huge f1 fan, I watch every race, no matter the time or date. As part of my f1 love, I also work as a freelancer for Sportskeeda, writing f1 articles."
             image="/hobbies.png"
             alt="Github homescreen"
             cw="50%"

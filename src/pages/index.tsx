@@ -16,11 +16,11 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { BsGithub, BsArrowRight } from "react-icons/bs";
-import { CgWebsite } from "react-icons/cg";
+import { BsArrowRight } from "react-icons/bs";
 import { FaPython } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   SiPypi,
   SiJavascript,
   SiTypescript,
@@ -57,6 +57,7 @@ import FeaturedProject from "components/FeaturedProject";
 import ImageBox from "components/ImageBox";
 import SomeText from "components/SomeText";
 import ThemedButton from "components/ThemedButton";
+import FeaturedProjectList from "data/featured_projects";
 
 interface IconWrapperProps {
   icon: IconType;
@@ -104,7 +105,7 @@ const Home = () => {
         <Box
           width={{ base: "100%", xl: "70%" }}
           p={{ base: 0, md: 8 }}
-          textAlign={{ base: "center", md: "center" }}
+          textAlign={{ base: "left", md: "left" }}
         >
           <Heading as="h2" size="2xl">
             <Text
@@ -125,22 +126,23 @@ const Home = () => {
             </Text>
           </Heading>
           <Text marginTop={{ base: 3, md: 5 }} fontSize="xl">
-            Hi I&apos;m Arnav, a High Schooler and aspiring CS/Econ major.
+            Hi I&apos;m Arnav, a High School Senior and an aspiring CS and Econ
+            major.
           </Text>
           <Text marginTop={{ base: 3, md: 5 }} fontSize="xl">
-            I&apos;ve lived in cities all across India, but currently call
-            Bangalore home!
+            I&apos;ve lived in cities across India, but currently call Bangalore
+            home!
           </Text>
           <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
-            I mainly started programming as a hobby/school work but after self
-            learning and making projects I&apos;ve grown to love it!
+            I mainly started programming as a hobby but after making projects
+            and learning through youtube, I&apos;ve grown to adore it!
           </Text>
           <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
             I&apos;m passionate about Crypto, Financial Technology, Programming
             language Creation, Image Manipulation, Web Development and Chatbots!
           </Text>
           <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
-            At home I love reading YA novels, watching Formula1, runnibg my food
+            At home I love reading YA novels, watching Formula1, running my food
             blog, collecting fountain pens and spending time with family.
           </Text>
           <Link href="/about" passHref>
@@ -176,120 +178,21 @@ const Home = () => {
             Featured Projects
           </Text>
         </Heading>
-        <FeaturedProject
-          image={useColorModeValue("/dagpi_home_w.png", "/dagpi_home_b.png")}
-          alt="dagpi website"
-          name="Dagpi"
-          height={1032}
-          width={1919}
-          description="Dagpi is a SoftwareAsAService API that I'm the CEO and founder of. It features ImageManipulation as a servie with a dashboard. Each user has metrics, and the option to buy a premium service with stripe. Dagpi uses rust, python and typescript. View github for full stack!"
-          textc={textc}
-          tags={[
-            "python",
-            "api",
-            "rust",
-            "react",
-            "docker",
-            "docker",
-            "express",
-            "linux",
-            "pgsql",
-            "stripe",
-            "grafana",
-          ]}
-          reversed={false}
-          link_icons={[
-            {
-              id: 0,
-              icon: BsGithub,
-              url: "https://github.com/daggy1234/dagpi",
-            },
-            {
-              id: 1,
-              icon: CgWebsite,
-              url: "https://dagpi.xyz",
-            },
-          ]}
-        />
-        <FeaturedProject
-          image={useColorModeValue("/polaroid_w.png", "/polaroid_b.png")}
-          alt="polaroid github"
-          name="Polaroid"
-          height={1031}
-          width={1920}
-          description="Polaroid is an Image Manipulation Library for python written in rust. Using the speed of rust with the ease of python to create a great up-and-coming image library to rival PIL!"
-          textc={textc}
-          tags={["rust", "images", "python", "pypi", "pyo3"]}
-          reversed
-          link_icons={[
-            {
-              id: 0,
-              icon: BsGithub,
-              url: "https://github.com/daggy1234/dagbot",
-            },
-            {
-              id: 1,
-              icon: SiPypi,
-              url: "https://pypi.org/polaroid",
-            },
-          ]}
-        />
-        <FeaturedProject
-          image="/foodblog.png"
-          alt="Daggy Food Blog"
-          name="Food Blog"
-          height={893}
-          width={1666}
-          description="DaggyFoodBlog is my experiment with running a custom blog on the hugo platform. Lots of SEO optimization, Image optimization and performance! Also some great articles"
-          textc={textc}
-          tags={["blog", "hugo", "netlify", "html", "js", "css"]}
-          reversed={false}
-          link_icons={[
-            {
-              id: 0,
-              icon: BsGithub,
-              url: "https://github.com/daggy1234/food-blog",
-            },
-            {
-              id: 1,
-              icon: CgWebsite,
-              url: "https://daggy-food-blog.netlify.app",
-            },
-          ]}
-        />
-        <FeaturedProject
-          image={useColorModeValue("/dagbot_ss_w.png", "/dagbot_ss_b.png")}
-          alt="dagbot in discord"
-          name="Dagbot"
-          height={1040}
-          width={1457}
-          description="Dagbot was my first serious bot! Dagbot is written in python, with tons of features using discord api, dagpi and a variety of others. Couples with A MERN stack dashboard that syncs with the bot, this is a fully full stack app!"
-          textc={textc}
-          tags={[
-            "python",
-            "bot",
-            "react",
-            "express",
-            "ts",
-            "docker",
-            "kubernetes",
-            "pgsql",
-            "mongodb",
-          ]}
-          reversed
-          link_icons={[
-            {
-              id: 0,
-              icon: BsGithub,
-              url: "https://github.com/daggy1234/dagbot",
-            },
-            {
-              id: 1,
-              icon: CgWebsite,
-              url: "https://dagbot.daggy.tech",
-            },
-          ]}
-        />
+        {FeaturedProjectList.map((value) => (
+          <FeaturedProject
+            name={value.name}
+            description={value.description}
+            textc={textc}
+            images={[value.images[0], value.images[1]]}
+            key={value.id}
+            tags={value.tags}
+            link_icons={value.icons}
+            height={value.height}
+            width={value.width}
+            alt={value.alt}
+            reversed={value.reversed}
+          />
+        ))}
       </Flex>
       <Flex
         bg={bl}
@@ -366,11 +269,11 @@ const Home = () => {
                 <Td flexDirection="row">
                   <Flex>
                     <IconWrapper icon={FaPython} text="Python" />
-                    <IconWrapper icon={SiJavascript} text="Python" />
-                    <IconWrapper icon={SiTypescript} text="Python" />
-                    <IconWrapper icon={SiRust} text="Python" />
-                    <IconWrapper icon={SiDeno} text="Python" />
-                    <IconWrapper icon={SiSolidity} text="Python" />
+                    <IconWrapper icon={SiJavascript} text="Javascript" />
+                    <IconWrapper icon={SiTypescript} text="Typescript" />
+                    <IconWrapper icon={SiRust} text="Rust" />
+                    <IconWrapper icon={SiDeno} text="Deno" />
+                    <IconWrapper icon={SiSolidity} text="Solidity" />
                     <IconWrapper icon={SiGnubash} text="Bash" />
                   </Flex>
                 </Td>

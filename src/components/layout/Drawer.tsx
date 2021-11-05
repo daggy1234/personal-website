@@ -37,19 +37,19 @@ const DrawerWidget = ({ onClose, isOpen }: DrawerWidgetProps) => {
         <DrawerBody>
           <MotionBox>
             <Flex marginY={4} direction="column" textAlign="left" spacing={3}>
-              <Link href="/">
+              <Link passHref href="/">
                 <Heading>Home</Heading>
               </Link>
-              <Link href="/about">
+              <Link passHref href="/about">
                 <Heading>About</Heading>
               </Link>
-              <Link href="/projects">
+              <Link passHref href="/projects">
                 <Heading>Projects</Heading>
               </Link>
-              <Link href="/contact">
+              <Link passHref href="/contact">
                 <Heading>Contact</Heading>
               </Link>
-              <Link href="https://dagpi.xyz/donate">
+              <Link passHref href="https://dagpi.xyz/donate">
                 <Heading>Donate</Heading>
               </Link>
             </Flex>

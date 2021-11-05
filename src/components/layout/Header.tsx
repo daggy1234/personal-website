@@ -11,7 +11,7 @@ interface MenuItemProps {
 
 const MenuItem = ({ children }: MenuItemProps) => {
   return (
-    <Box display="inline-block" marginRight={{ base: "0.5em", md: "2em" }}>
+    <Box display="inline-block" marginRight={{ base: "0.5em", lg: "1em" }}>
       {children}
     </Box>
   );
@@ -72,10 +72,11 @@ const Header = ({ onOpen }: HeaderProps) => {
       </Heading>
       <Box marginLeft="auto">
         <Flex alignItems="center" display={{ base: "none", md: "flex" }}>
+          <HeaderTextComponent text="home" url="/" />
           <HeaderTextComponent text="about" url="/about" />
           <HeaderTextComponent text="projects" url="/projects" />
           <HeaderTextComponent text="contact" url="/contact" />
-          <HeaderTextComponent text="donate" url="https://dagpi.xyz/donate" />
+          {/* <HeaderTextComponent text="donate" url="https://dagpi.xyz/donate" /> */}
           <MenuItem>
             <ThemeToggle />
           </MenuItem>
