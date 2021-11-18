@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-nested-template-literals */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-props-no-spreading */
 /**
  * @todo: remove this comment below when ready
@@ -100,6 +102,7 @@ class MyDocument extends Document {
             {fetch(
               `https://counter.dev/track?${new URLSearchParams({
                 referrer: document.referrer,
+                // eslint-disable-next-line no-restricted-globals
                 screen: `${screen.width}x${screen.height}`,
                 user: "daggy1234",
                 utcoffset: "6",
