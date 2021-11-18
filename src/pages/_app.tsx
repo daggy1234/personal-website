@@ -51,18 +51,7 @@ const MyApp = ({
         `}
         </Script>
         <Script strategy="afterInteractive" id="other-analyitcs">
-          {`if(!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol+"//"+location.host)!== 0)
-            {fetch(
-              https://counter.dev/track?{new URLSearchParams({
-                referrer: document.referrer,
-                // eslint-disable-next-line no-restricted-globals
-                screen: {screen.width}x{screen.height},
-                user: "daggy1234",
-                utcoffset: "6",
-              })}
-            )}
-            ;sessionStorage.setItem("_swa","1");}
-            `}
+          {`if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"daggy1234",utcoffset:"6"}))};sessionStorage.setItem("_swa","1");`}
         </Script>
         <Layout>
           <Component {...pageProps} />
