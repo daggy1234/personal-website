@@ -39,20 +39,19 @@ const MyApp = ({
         </Head>
         <DefaultSeo {...defaultSEOConfig} />
         <Script
-          src="https://www.google-analytics.com/analytics.js"
+          src="https://www.googletagmanager.com/gtag/js?id=G-WQ6SL054X0"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-          ga('create', 'GOOGLE_ANALYTICS_ID', 'auto');
-          ga('send', 'pageview');
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-WQ6SL054X0');
         `}
         </Script>
-        <Script
-          id="other-analyitcs"
-          dangerouslySetInnerHTML={{
-            __html: `if(!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol+"//"+location.host)!== 0)
+        <Script strategy="afterInteractive" id="other-analyitcs">
+          {`if(!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol+"//"+location.host)!== 0)
             {fetch(
               https://counter.dev/track?{new URLSearchParams({
                 referrer: document.referrer,
@@ -63,9 +62,8 @@ const MyApp = ({
               })}
             )}
             ;sessionStorage.setItem("_swa","1");}
-            `,
-          }}
-        />
+            `}
+        </Script>
         <Layout>
           <Component {...pageProps} />
         </Layout>
