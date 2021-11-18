@@ -38,6 +38,10 @@ const MyApp = ({
           />
         </Head>
         <DefaultSeo {...defaultSEOConfig} />
+        <Script
+          src="https://www.google-analytics.com/analytics.js"
+          strategy="afterInteractive"
+        />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
           window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -46,23 +50,22 @@ const MyApp = ({
         `}
         </Script>
         <Script
-          src="https://www.google-analytics.com/analytics.js"
-          strategy="afterInteractive"
-        />
-        <Script strategy="afterInteractive" id="other-analyitcs">
-          {`if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0)
+          id="other-analyitcs"
+          dangerouslySetInnerHTML={{
+            __html: `if(!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol+"//"+location.host)!== 0)
             {fetch(
-              https://counter.dev/track?${new URLSearchParams({
+              https://counter.dev/track?{new URLSearchParams({
                 referrer: document.referrer,
                 // eslint-disable-next-line no-restricted-globals
-                screen: `${screen.width}x${screen.height}`,
+                screen: {screen.width}x{screen.height},
                 user: "daggy1234",
                 utcoffset: "6",
               })}
             )}
             ;sessionStorage.setItem("_swa","1");}
-            `}
-        </Script>
+            `,
+          }}
+        />
         <Layout>
           <Component {...pageProps} />
         </Layout>
