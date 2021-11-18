@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-nested-template-literals */
 /* eslint-disable react/jsx-props-no-spreading */
 import { ChakraProvider } from "@chakra-ui/react";
 import { EmotionCache } from "@emotion/cache";
@@ -8,6 +9,7 @@ import Head from "next/head";
 import "@fontsource/raleway/latin.css";
 import "@fontsource/montserrat/latin.css";
 import "@fontsource/playfair-display/latin.css";
+import Script from "next/script";
 
 import defaultSEOConfig from "../../next-seo.config";
 import Layout from "components/layout";
@@ -36,6 +38,31 @@ const MyApp = ({
           />
         </Head>
         <DefaultSeo {...defaultSEOConfig} />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+          ga('create', 'GOOGLE_ANALYTICS_ID', 'auto');
+          ga('send', 'pageview');
+        `}
+        </Script>
+        <Script
+          src="https://www.google-analytics.com/analytics.js"
+          strategy="afterInteractive"
+        />
+        <Script strategy="afterInteractive" id="other-analyitcs">
+          {`if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0)
+            {fetch(
+              https://counter.dev/track?${new URLSearchParams({
+                referrer: document.referrer,
+                // eslint-disable-next-line no-restricted-globals
+                screen: `${screen.width}x${screen.height}`,
+                user: "daggy1234",
+                utcoffset: "6",
+              })}
+            )}
+            ;sessionStorage.setItem("_swa","1");}
+            `}
+        </Script>
         <Layout>
           <Component {...pageProps} />
         </Layout>
