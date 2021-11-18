@@ -94,6 +94,19 @@ class MyDocument extends Document {
             type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
+          <script>
+            if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!==
+            0)
+            {fetch(
+              `https://counter.dev/track?${new URLSearchParams({
+                referrer: document.referrer,
+                screen: `${screen.width}x${screen.height}`,
+                user: "daggy1234",
+                utcoffset: "6",
+              })}`
+            )}
+            ;sessionStorage.setItem("_swa","1");
+          </script>
         </Head>
         <body>
           <Main />
