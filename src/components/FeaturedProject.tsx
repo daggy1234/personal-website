@@ -92,7 +92,6 @@ const ContentBox = ({
         {description}
       </Flex>
       <Box
-        columns={5}
         mt={6}
         fontWeight="600"
         opacity="0.7"
