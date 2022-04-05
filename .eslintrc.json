@@ -1,7 +1,15 @@
 {
-  "extends": [
-    "sznm/react",
-    "plugin:react/jsx-runtime",
-    "plugin:@next/next/recommended"
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "sznm/react",
+        "plugin:react/jsx-runtime",
+        "plugin:@next/next/recommended"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
   ]
 }

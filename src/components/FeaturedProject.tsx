@@ -8,6 +8,7 @@ import {
   Text,
   TypographyProps,
   useBreakpointValue,
+  SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { IconType } from "react-icons";
@@ -91,7 +92,8 @@ const ContentBox = ({
       >
         {description}
       </Flex>
-      <Box
+      <SimpleGrid
+        columns={5}
         mt={6}
         fontWeight="600"
         opacity="0.7"
@@ -107,7 +109,7 @@ const ContentBox = ({
             {value}
           </Text>
         ))}
-      </Box>
+      </SimpleGrid>
       <HStack
         fontWeight="600"
         opacity="0.7"
