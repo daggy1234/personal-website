@@ -49,8 +49,8 @@ const DrawerWidget = ({ onClose, isOpen }: DrawerWidgetProps) => {
               <Link passHref href="/contact">
                 <Heading>Contact</Heading>
               </Link>
-              <Link passHref href="https://dagpi.xyz/donate">
-                <Heading>Donate</Heading>
+              <Link passHref href="/resume.pdf">
+                <Heading>Resume</Heading>
               </Link>
             </Flex>
           </MotionBox>

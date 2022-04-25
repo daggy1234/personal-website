@@ -76,6 +76,7 @@ const Header = ({ onOpen }: HeaderProps) => {
           <HeaderTextComponent text="about" url="/about" />
           <HeaderTextComponent text="projects" url="/projects" />
           <HeaderTextComponent text="contact" url="/contact" />
+          <HeaderTextComponent text="resume" url="/resume.pdf" />
           {/* <HeaderTextComponent text="donate" url="https://dagpi.xyz/donate" /> */}
           <MenuItem>
             <ThemeToggle />
