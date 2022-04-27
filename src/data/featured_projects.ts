@@ -74,7 +74,7 @@ const FeaturedProjectList: FeaturedProjectType[] = [
       {
         id: 0,
         icon: BsGithub,
-        url: "https://github.com/daggy1234/dagbot",
+        url: "https://github.com/daggy1234/polaroid",
       },
       {
         id: 1,
