@@ -2,15 +2,13 @@ import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 import colors from "./colors";
-import Button from "./components/button";
+import { components } from "./components";
 import fonts from "./fonts";
 
 const customTheme = extendTheme({
   fonts,
   colors,
-  components: {
-    Button,
-  },
+  components,
   styles: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     global: (props: any) => ({

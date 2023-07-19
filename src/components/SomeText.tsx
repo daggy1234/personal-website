@@ -49,7 +49,7 @@ const SomeText = () => {
       p={{ base: 0, md: 6, lg: 10 }}
       width={{ base: "100%", md: "50%", lg: "45%", xl: "35%" }}
       backgroundColor={useColorModeValue("bgwhite.100", "bgblack.100")}
-      experimental_spaceY={3}
+      marginY={3}
     >
       <Heading fontWeight="800" as="h2" fontSize={{ base: "5xl", md: "6xl" }}>
         Arnav Jindal
