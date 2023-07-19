@@ -1,7 +1,7 @@
 import { BsGithub, BsDownload } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { FaLink } from "react-icons/fa";
-import { IconType } from "react-icons/lib";
+import type { IconType } from "react-icons/lib";
 import { SiDocker, SiDiscord } from "react-icons/si";
 
 interface MoreProjectTypeIconType {

@@ -12,6 +12,7 @@ const customTheme = extendTheme({
     Button,
   },
   styles: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     global: (props: any) => ({
       "*::selection": {
         color: mode("#fff", "rgb(17, 17, 17)")(props),

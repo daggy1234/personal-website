@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaKeybase } from "react-icons/fa";
-import { IconType } from "react-icons/lib";
+import type { IconType } from "react-icons/lib";
 import { MdEmail } from "react-icons/md";
 import { SiDiscord, SiTwitter } from "react-icons/si";
 
@@ -109,13 +109,13 @@ const Contact = () => {
             text="Twitter"
             icon={SiTwitter}
             color="#1DA1F2"
-            url="https://twitter.com/evrybodyajr/"
+            url="https://twitter.com/daggy1234/"
           />
           <IconWrap
             text="Mail"
             icon={MdEmail}
             color={useColorModeValue("#000", "#fff")}
-            url="mailto:daggy@daggy.tech"
+            url="mailto:contact@arnavjindal.xyz"
           />
         </Flex>
         <Flex

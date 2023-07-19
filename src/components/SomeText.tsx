@@ -7,8 +7,9 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { NextRouter, useRouter } from "next/router";
-import { IconType } from "react-icons";
+import type { NextRouter } from "next/router";
+import { useRouter } from "next/router";
+import type { IconType } from "react-icons";
 import { BsTwitter, BsLinkedin, BsReddit, BsGithub } from "react-icons/bs";
 
 interface IconWrapProps {

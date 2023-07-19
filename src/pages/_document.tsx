@@ -7,13 +7,8 @@
  * */
 import createEmotionServer from "@emotion/server/create-instance";
 // eslint-disable-next-line @next/next/no-document-import-in-page
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from "next/document";
+import type { DocumentContext } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import * as React from "react";
 
 import createEmotionCache from "styles/createEmotionCache";
@@ -30,8 +25,9 @@ class MyDocument extends Document {
     ctx.renderPage = () =>
       originalRenderPage({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        enhanceApp: (App: any) => (props) =>
-          <App emotionCache={cache} {...props} />,
+        enhanceApp: (App: any) => (props) => (
+          <App emotionCache={cache} {...props} />
+        ),
       });
 
     const initialProps = await Document.getInitialProps(ctx);
@@ -88,7 +84,7 @@ class MyDocument extends Document {
           <link
             rel="stylesheet"
             type="text/css"
-            charSet="UTF-8"
+            // charSet="UTF-8"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
           />
           <link

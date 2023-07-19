@@ -10,7 +10,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 
 interface IconWrapProps {
   icon: IconType;

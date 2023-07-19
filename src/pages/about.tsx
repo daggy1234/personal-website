@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/naming-convention */
 import {
   Box,
@@ -9,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import "react-vertical-timeline-component/style.min.css";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { BiCodeAlt } from "react-icons/bi";
 import { FaDiscord, FaRust, FaReact, FaEthereum } from "react-icons/fa";
 import { ImPaintFormat } from "react-icons/im";
@@ -130,7 +131,7 @@ const About = () => {
         </Heading>
         <Box marginY="5%">
           <TextImage
-            text="I'm  a 17-year-old high school kid from Bangalore. I grew up in Chennai,  Delhi and Gurgaon before moving to Bangalore. I'm Hindu and Buddhist, and  generally enjoy Computer Science and Econ. I've always been fascinated  with Science and Maths, be it through topping my class in elementary  school or qualifying for the top 25 in Olympiads. With that  interest in STEM, my dad encouraged me to start coding early, and I  considered it a fun activity. My journey pivoted in the  8th Grade when I left my unconventional Experiential learning school in  Gurgaon to join NAFL in Bangalore. The stem culture here was awesome,  and I developed a great appreciation for Electronics and Programming. I  spent a ton of time tinkering with electronics, working with  microprocessors and circuits to make fun projects. As an IGCSE student I  explored interesting CS theory like Logic gates and Image Optimization  Algorithms. With my growing knowledge of python, making projects was  fun."
+            text="I'm  a 19-year-old college student at Duke. I grew up in Chennai,  Delhi, Gurgaon and Bangalore before moving to Durham to attend Duke. I'm Hindu and Buddhist, and  generally enjoy Computer Science and Econ. I've always been fascinated  with Science and Maths, be it through topping my class in elementary  school or qualifying for the top 25 in Olympiads. With that  interest in STEM, my dad encouraged me to start coding early, and I  considered it a fun activity. My journey pivoted in the  8th Grade when I left my unconventional Experiential learning school in  Gurgaon to join NAFL in Bangalore. The stem culture here was awesome,  and I developed a great appreciation for Electronics and Programming. I  spent a ton of time tinkering with electronics, working with  microprocessors and circuits to make fun projects. As an IGCSE student I  explored interesting CS theory like Logic gates and Image Optimization  Algorithms. With my growing knowledge of python, making projects was  fun."
             image="/dagbot.png"
             height={600}
             cw="60%"
@@ -148,7 +149,7 @@ const About = () => {
             width={799}
           />
           <TextImage
-            text="Apart  from programming, I'm a passionate environmentalist. I've collected  over 120kgs+ of e-waste for recycling and developed a software solution  to help people find e-waste centres. I'm into MUN, having founded NAFL's  MUN club and winning the Oxford MUN Singapore. As a self-proclaimed YA  novel aficionado, I can tear through a teen novel no matter how 'cringe'  and still love it! I'm also a passionate member of my school book club,  where I love the discussions we have on literature, philosophy,  society, and feminism. On the left is my favourite book: Paper Towns by John Green, it's a novel that I can always read when I'm  in a bad mood.."
+            text="Apart  from programming, I'm a passionate environmentalist. I've collected  over 120kgs+ of e-waste for recycling and developed a software solution  to help people find e-waste centres. I'm into MUN, having founded NAFL's  MUN club and winning the Oxford MUN Singapore. As a self-proclaimed YA  novel aficionado, I can tear through a teen novel no matter how 'cringe'  and still love it! I was a passionate member of my school book club,  where I love the discussions we have on literature, philosophy,  society, and feminism. On the left is my favourite book: Paper Towns by John Green, it's a novel that I can always read when I'm  in a bad mood.."
             image="/papertowns.jpg"
             alt="Github homescreen"
             cw="50%"
@@ -162,6 +163,15 @@ const About = () => {
             alt="Github homescreen"
             cw="50%"
             reverse
+            height={320}
+            width={320}
+          />
+          <TextImage
+            text="At Duke, I'm part of quite a few clubs and extracurricular activities. I've been on my Dorms student rep council for 2 years now. I'm also a senator of the Duke Student Government. As an editor for the Duke Chronicle, I explore writting as a creative outlet. As a member of Hack Duke's tech team I help host one of the largest collegiate code-for good hackathons. I'm also passionate about Formula 1 and run a small Duke F1 fan club. "
+            image="/hobbies.png"
+            alt="Github homescreen"
+            cw="50%"
+            reverse={false}
             height={320}
             width={320}
           />
@@ -281,7 +291,7 @@ const About = () => {
             location=""
             bg="#EB459E"
             heading="Theme Developer"
-            date="2020 - present"
+            date="2020 - 2022"
             description="Worked on themes for VSC, and Better Discord/Powercord. Themes have 100k+ downloads aldready!"
           />
           <TimelineElement
@@ -305,7 +315,7 @@ const About = () => {
             location=""
             bg="#5d6dbe"
             heading="Solidity + CryptoCurrency"
-            date="2021-present"
+            date="2021"
             description="Learnt the solidity programming language and started developing crypto technology with web3 and the ethereum/binance chains. SLowly continuing"
           />
           <TimelineElement
@@ -315,6 +325,30 @@ const About = () => {
             heading="Vitamin Coin"
             date="2021"
             description="Worked as a developer on an emerging crypto currency Vitc. Helped develop the discord and twitter tipbots for vitamin coin"
+          />
+          <TimelineElement
+            icon={<CHI src="https://i.imgur.com/BVec63a.png" />}
+            location="Remote"
+            bg="#fcd8b6"
+            heading="ReachBest"
+            date="2022"
+            description="Worked as a full-stack software engineering intern. Created a dashboard to help visualize college admission statistics and also wrote deployment pipelines and CI for ease of development!"
+          />
+          <TimelineElement
+            icon={<CHI src="https://i.imgur.com/BVec63a.png" />}
+            location="Remote"
+            bg="#fcd8b6"
+            heading="ReachBest"
+            date="2022"
+            description="Worked as a full-stack software engineering intern. Created a dashboard to help visualize college admission statistics and also wrote deployment pipelines and CI for ease of development!"
+          />
+          <TimelineElement
+            icon={<CHI src="https://i.imgur.com/BVec63a.png" />}
+            location="Durham,NC"
+            bg="#fcd8b6"
+            heading="Research Assistantship"
+            date="2022-2023"
+            description="Worked as a full-stack software engineering intern. Created a dashboard to help visualize college admission statistics and also wrote deployment pipelines and CI for ease of development!"
           />
         </VerticalTimeline>
         <Heading as="h3" size="2xl">

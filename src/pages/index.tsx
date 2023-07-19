@@ -16,9 +16,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { BiVector } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { FaPython } from "react-icons/fa";
-import { IconType } from "react-icons/lib";
+import type { IconType } from "react-icons/lib";
 import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   SiPypi,
@@ -51,6 +52,8 @@ import {
   SiGooglecloud,
   SiFirebase,
   SiGit,
+  SiRailway,
+  SiOpenai,
 } from "react-icons/si";
 
 import FeaturedProject from "components/FeaturedProject";
@@ -126,20 +129,20 @@ const Home = () => {
             </Text>
           </Heading>
           <Text marginTop={{ base: 3, md: 5 }} fontSize="xl">
-            Hi I&apos;m Arnav, a High School Senior and an aspiring CS and Econ
-            major.
+            Hi I&apos;m Arnav, a Duke Student and an aspiring CS and Econ major.
           </Text>
           <Text marginTop={{ base: 3, md: 5 }} fontSize="xl">
-            I&apos;ve lived in cities across India, but currently call Bangalore
-            home!
+            I&apos;ve lived in cities across India and the US, but currently
+            call Durham,NC and Bangalore home!
           </Text>
           <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
             I mainly started programming as a hobby but after making projects
             and learning through youtube, I&apos;ve grown to adore it!
           </Text>
           <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
-            I&apos;m passionate about Crypto, Financial Technology, Programming
-            language Creation, Image Manipulation, Web Development and Chatbots!
+            I&apos;m passionate about Financial Technology, Programming language
+            Creation, Systems Research, Image Manipulation, Web Development and
+            Vector Stores!
           </Text>
           <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
             At home I love reading YA novels, watching Formula1, running my food
@@ -287,6 +290,7 @@ const Home = () => {
                     <IconWrapper icon={SiRedis} text="Redis" />
                     <IconWrapper icon={SiMongodb} text="MongoDB" />
                     <IconWrapper icon={SiFirebase} text="Firebase DB" />
+                    <IconWrapper icon={BiVector} text="Vector Stores" />
                   </Flex>
                 </Td>
               </Tr>
@@ -301,6 +305,7 @@ const Home = () => {
                     <IconWrapper icon={SiTravisci} text="Travis CI" />
                     <IconWrapper icon={SiLinux} text="Linux" />
                     <IconWrapper icon={SiGit} text="Git" />
+                    <IconWrapper icon={SiRailway} text="Railway" />
                   </Flex>
                 </Td>
               </Tr>
@@ -326,6 +331,7 @@ const Home = () => {
                     <IconWrapper icon={SiGooglecloud} text="Google Cloud" />
                     <IconWrapper icon={SiCloudflare} text="Cloudflare" />
                     <IconWrapper icon={SiIbmwatson} text="IBM watson" />
+                    <IconWrapper icon={SiOpenai} text="OpenAI" />
                   </Flex>
                 </Td>
               </Tr>

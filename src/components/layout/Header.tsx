@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, useColorModeValue, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import React from "react";
+import type React from "react";
 
 import MenuButton from "./MenuButton";
 import ThemeToggle from "./ThemeToggle";

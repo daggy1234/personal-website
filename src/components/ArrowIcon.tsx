@@ -1,4 +1,5 @@
-import { Icon, IconProps } from "@chakra-ui/react";
+import type { IconProps } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
 
 export default function ArrowIcon(props: IconProps) {
   return (

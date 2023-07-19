@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
+import type { TypographyProps } from "@chakra-ui/react";
 import {
   Box,
   Heading,
@@ -6,12 +7,11 @@ import {
   Image,
   HStack,
   Text,
-  TypographyProps,
   useBreakpointValue,
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 
 import IconLink from "components/IconLink";
 import ImageBox from "components/ImageBox";

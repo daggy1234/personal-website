@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { QueryData } from "../../types/typed_data";
+import type { QueryData } from "../../types/typed_data";
 
 const GITHUB_TOKEN = process.env.GITHUB_PA;
 const ExceptionRules = [

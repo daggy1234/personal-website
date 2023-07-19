@@ -2,7 +2,7 @@ import { Flex, Heading, Text, Icon } from "@chakra-ui/react";
 import { FiBook, FiStar, FiLock } from "react-icons/fi";
 import { HiOutlineScale } from "react-icons/hi";
 
-import { RespositoryData } from "types/typed_data";
+import type { RespositoryData } from "types/typed_data";
 
 interface GithubProjectProps {
   data: RespositoryData;

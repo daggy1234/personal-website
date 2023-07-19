@@ -1,5 +1,5 @@
 import { Box, Icon, Link, VisuallyHidden } from "@chakra-ui/react";
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 import { BiLinkExternal } from "react-icons/bi";
 
 interface IconLinkProps {

@@ -1,7 +1,7 @@
-import { BsGithub, BsArrowRight } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
-import { FaPython } from "react-icons/fa";
-import { IconType } from "react-icons/lib";
+// import { FaPython } from "react-icons/fa";
+import type { IconType } from "react-icons/lib";
 import { SiPypi, SiDocker } from "react-icons/si";
 
 interface FeaturedProjectTypeIconType {
