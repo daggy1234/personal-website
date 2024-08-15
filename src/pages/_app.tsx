@@ -3,6 +3,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import type { EmotionCache } from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
+import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 // import "@fontsource/raleway/latin.css";
@@ -37,6 +38,7 @@ const MyApp = ({
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
           />
         </Head>
+        <Analytics />
         <DefaultSeo {...defaultSEOConfig} />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WQ6SL054X0"
