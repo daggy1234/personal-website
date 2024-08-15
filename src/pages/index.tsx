@@ -18,7 +18,7 @@ import {
 import Link from "next/link";
 import { BiVector } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
-import { FaPython } from "react-icons/fa";
+import { FaPython, FaAws } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import type { IconType } from "react-icons/lib";
 import {
@@ -27,7 +27,6 @@ import {
   SiJavascript,
   SiTypescript,
   SiRust,
-  SiAmazonaws,
   SiDeno,
   SiDocker,
   SiKubernetes,
@@ -358,7 +357,7 @@ const Home = () => {
                 <Td>Cloud</Td>
                 <Td>
                   <Flex>
-                    <IconWrapper icon={SiAmazonaws} text="AWS" />
+                    <IconWrapper icon={FaAws} text="AWS" />
                     <IconWrapper icon={SiNetlify} text="Netlify" />
                     <IconWrapper icon={SiVercel} text="Vercel" />
                     <IconWrapper icon={SiGooglecloud} text="Google Cloud" />

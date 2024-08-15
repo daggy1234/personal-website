@@ -16,10 +16,10 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useState } from "react";
-import { FaKeybase } from "react-icons/fa";
+import { FaKeybase, FaTwitter } from "react-icons/fa";
 import type { IconType } from "react-icons/lib";
 import { MdEmail } from "react-icons/md";
-import { SiDiscord, SiTwitter } from "react-icons/si";
+import { SiDiscord } from "react-icons/si";
 
 import ThemedButton from "components/ThemedButton";
 
@@ -160,7 +160,7 @@ const Contact = () => {
           />
           <IconWrap
             text="Twitter"
-            icon={SiTwitter}
+            icon={FaTwitter}
             color="#1DA1F2"
             url="https://twitter.com/daggy1234/"
           />
