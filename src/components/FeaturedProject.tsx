@@ -76,17 +76,19 @@ const ContentBox = ({
       marginRight={mr}
       marginLeft={ml}
       justifyContent="center"
+      // justifyContent={align}
     >
       <Heading opacity={0.7} size="sm" color={textc} alignSelf={align}>
         Featured Project
       </Heading>
-      <Heading marginBottom={3} color={textc} alignSelf={align}>
+      <Heading fontSize="3em" marginBottom={3} color={textc} alignSelf={align}>
         {name}
       </Heading>
       <Flex
         bg={useColorModeValue("gray.100", "#212930")}
         width="100%"
         p={8}
+        fontSize="1.3em"
         direction="column"
         borderRadius="0.5em"
       >

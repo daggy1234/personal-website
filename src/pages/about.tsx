@@ -8,11 +8,10 @@ import {
   Flex,
   Image as CHI,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import "react-vertical-timeline-component/style.min.css";
 import type { ReactElement } from "react";
 import { BiCodeAlt } from "react-icons/bi";
-import { FaDiscord, FaRust, FaReact, FaEthereum } from "react-icons/fa";
+import { FaDiscord, FaReact } from "react-icons/fa";
 import { ImPaintFormat } from "react-icons/im";
 import { SiScratch, SiIbm } from "react-icons/si";
 import {
@@ -20,15 +19,15 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-interface TextImageProps {
-  text: string;
-  reverse: boolean;
-  image: string;
-  alt: string;
-  height: number;
-  width: number;
-  cw: string;
-}
+// interface TextImageProps {
+//   text: string;
+//   reverse: boolean;
+//   image: string;
+//   alt: string;
+//   height: number;
+//   width: number;
+//   cw: string;
+// }
 
 interface TimelineElementProps {
   date: string;
@@ -74,36 +73,36 @@ const TimelineElement = ({
   );
 };
 
-const TextImage = ({
-  text,
-  reverse,
-  image,
-  alt,
-  height,
-  width,
-  cw,
-}: TextImageProps) => {
-  return (
-    <Flex
-      marginY={{ base: 0, md: "2%" }}
-      paddingX={{ base: 0, md: 4, xl: 10 }}
-      marginX={{ base: 0, xl: "10%" }}
-      direction={{ base: "column", md: reverse ? "row-reverse" : "row" }}
-    >
-      <Box
-        mr={{ base: 0, md: 3 }}
-        ml={{ base: 0, md: 3 }}
-        textAlign={{ base: "center", md: "left" }}
-        width={{ base: "100%", md: cw }}
-      >
-        <Text>{text}</Text>
-      </Box>
-      <Box>
-        <Image height={height} width={width} src={image} alt={alt} />
-      </Box>
-    </Flex>
-  );
-};
+// const TextImage = ({
+//   text,
+//   reverse,
+//   image,
+//   alt,
+//   height,
+//   width,
+//   cw,
+// }: TextImageProps) => {
+//   return (
+//     <Flex
+//       marginY={{ base: 0, md: "2%" }}
+//       paddingX={{ base: 0, md: 4, xl: 10 }}
+//       marginX={{ base: 0, xl: "10%" }}
+//       direction={{ base: "column", md: reverse ? "row-reverse" : "row" }}
+//     >
+//       <Box
+//         mr={{ base: 0, md: 3 }}
+//         ml={{ base: 0, md: 3 }}
+//         textAlign={{ base: "center", md: "left" }}
+//         width={{ base: "100%", md: cw }}
+//       >
+//         <Text>{text}</Text>
+//       </Box>
+//       <Box>
+//         <Image height={height} width={width} src={image} alt={alt} />
+//       </Box>
+//     </Flex>
+//   );
+// };
 
 const About = () => {
   const bl = useColorModeValue("brand.400", "brand.600");
@@ -130,51 +129,20 @@ const About = () => {
           </Text>
         </Heading>
         <Box marginY="5%">
-          <TextImage
-            text="I'm  a 19-year-old college student at Duke. I grew up in Chennai,  Delhi, Gurgaon and Bangalore before moving to Durham to attend Duke. I'm Hindu and Buddhist, and  generally enjoy Computer Science and Econ. I've always been fascinated  with Science and Maths, be it through topping my class in elementary  school or qualifying for the top 25 in Olympiads. With that  interest in STEM, my dad encouraged me to start coding early, and I  considered it a fun activity. My journey pivoted in the  8th Grade when I left my unconventional Experiential learning school in  Gurgaon to join NAFL in Bangalore. The stem culture here was awesome,  and I developed a great appreciation for Electronics and Programming. I  spent a ton of time tinkering with electronics, working with  microprocessors and circuits to make fun projects. As an IGCSE student I  explored interesting CS theory like Logic gates and Image Optimization  Algorithms. With my growing knowledge of python, making projects was  fun."
-            image="/dagbot.png"
-            height={600}
-            cw="60%"
-            width={600}
-            alt="Dagbot logo"
-            reverse={false}
-          />
-          <TextImage
-            text="2020  threw a curveball. I watched summer plans dissapear as I looked for  hobbies to fill time. A Reddit community talked about discord bot  development, and intrigued, I dove in. I instantly fell in love  and slowly drove head first into the programming rabbit hole. Soon I  spent all my free time making websites, bots, and more. I started a  startup, volunteered for NGO's and even did a few internships and  freelance work. I was blown away by what I could make with code. Old  interests like Pokémon, crypto and f1 fell into my programming projects.  I knew I had found what I was passionate about, and I ran with that!  The Open-source community was so powerful, and all the amazing people  I've met on GitHub have inspired me to do more. "
-            image="/gh.png"
-            alt="Github homescreen"
-            reverse
-            cw="70%"
-            height={470}
-            width={799}
-          />
-          <TextImage
-            text="Apart  from programming, I'm a passionate environmentalist. I've collected  over 120kgs+ of e-waste for recycling and developed a software solution  to help people find e-waste centres. I'm into MUN, having founded NAFL's  MUN club and winning the Oxford MUN Singapore. As a self-proclaimed YA  novel aficionado, I can tear through a teen novel no matter how 'cringe'  and still love it! I was a passionate member of my school book club,  where I love the discussions we have on literature, philosophy,  society, and feminism. On the left is my favourite book: Paper Towns by John Green, it's a novel that I can always read when I'm  in a bad mood.."
-            image="/papertowns.jpg"
-            alt="Github homescreen"
-            cw="50%"
-            reverse={false}
-            height={250}
-            width={162}
-          />
-          <TextImage
-            text="For unwinding, I love making memes to spread laughter but also start discussions on issues. Currently have over 80000 Reddit Karma.  I also run a fountain pen YouTube Channel, and Instagram page where I share photos and guides on pen maintenance! Fountain Pens are a huge passion of mine, and as a member of the Indian Fountain Pen Association, I'm happy to promote the hobby.  As a huge f1 fan, I watch every race, no matter the time or date. As part of my f1 love, I also work as a freelancer for Sportskeeda, writing f1 articles."
-            image="/hobbies.png"
-            alt="Github homescreen"
-            cw="50%"
-            reverse
-            height={320}
-            width={320}
-          />
-          <TextImage
-            text="At Duke, I'm part of quite a few clubs and extracurricular activities. I've been on my Dorms student rep council for 2 years now. I'm also a senator of the Duke Student Government. As an editor for the Duke Chronicle, I explore writting as a creative outlet. As a member of Hack Duke's tech team I help host one of the largest collegiate code-for good hackathons. I'm also passionate about Formula 1 and run a small Duke F1 fan club. "
-            image="/hobbies.png"
-            alt="Github homescreen"
-            cw="50%"
-            reverse={false}
-            height={320}
-            width={320}
-          />
+          <Text
+            mx="auto"
+            alignItems="center"
+            alignContent="center"
+            justifyContent="center"
+            maxW="60%"
+          >
+            I&apos;m a 20-year-old college student at Duke. I grew up in
+            Chennai, Delhi, Gurgaon and Bangalore before moving to Durham to
+            attend Duke. I&apos;m passionate about COmputer Science, started
+            coding when I was 14 and Have a huge variety of projects under my
+            belt. I&apos;m currently focusing on research and software
+            engineering for large companies and startups.{" "}
+          </Text>
         </Box>
       </Flex>
       <Flex alignItems="center" direction="column">
@@ -213,7 +181,6 @@ const About = () => {
             date="2015"
             description="Via School's hour of code and external classes I started making games in scratch. Mostly simple games, this developed an early intrest in code and taught me logical thuiking! "
           />
-
           <TimelineElement
             icon={<CHI src="https://i.imgur.com/oQODMmY.png" />}
             location="Bangalore- NAFL"
@@ -226,7 +193,7 @@ const About = () => {
             icon={<CHI src="https://i.imgur.com/8EFyuVt.png" />}
             location="Bangalore"
             bg="#5865F2"
-            heading="IBM Proffesional Data Science Certificatio )"
+            heading="IBM Proffesional Data Science Certification )"
             date="2020"
             description="Completed IBM's 9 part course on becoming a professional data scientist. Worked with pandas, sklearn, matplotlib and more to finish a capstone with interactive maps!"
           />
@@ -237,14 +204,6 @@ const About = () => {
             heading="Discord Bot Development (discord.py, serenity.rs)"
             date="2020 - present"
             description="Discord bot development with the discord api. Initially started with discord.py, worked my way up and beame comfortable. Shifted to serenity with rust. Also made 8+ PR's and was an active contributor to the library"
-          />
-          <TimelineElement
-            icon={<FaRust />}
-            location=""
-            bg="#f44d1d"
-            heading="Learning Rust"
-            date="2020 - present"
-            description="After getting inspired, I picked up the rust programming language and slowly became proficient as I completed the rust book and made  few projects!"
           />
           <TimelineElement
             icon={<FaReact />}
@@ -311,14 +270,6 @@ const About = () => {
             description="Gifting a life NGO is an organisation that runs vaccine drives and has covid resource portals. I revamped the website and added whatsapp integrations."
           />
           <TimelineElement
-            icon={<FaEthereum />}
-            location=""
-            bg="#5d6dbe"
-            heading="Solidity + CryptoCurrency"
-            date="2021"
-            description="Learnt the solidity programming language and started developing crypto technology with web3 and the ethereum/binance chains. SLowly continuing"
-          />
-          <TimelineElement
             icon={<CHI src="https://i.imgur.com/NVcozFB.png" />}
             location=""
             bg="#fcd8b6"
@@ -335,20 +286,42 @@ const About = () => {
             description="Worked as a full-stack software engineering intern. Created a dashboard to help visualize college admission statistics and also wrote deployment pipelines and CI for ease of development!"
           />
           <TimelineElement
-            icon={<CHI src="https://i.imgur.com/BVec63a.png" />}
-            location="Remote"
-            bg="#fcd8b6"
-            heading="ReachBest"
-            date="2022"
-            description="Worked as a full-stack software engineering intern. Created a dashboard to help visualize college admission statistics and also wrote deployment pipelines and CI for ease of development!"
-          />
-          <TimelineElement
-            icon={<CHI src="https://i.imgur.com/BVec63a.png" />}
+            icon={
+              <CHI src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Duke_Athletics_logo.svg/300px-Duke_Athletics_logo.svg.png" />
+            }
             location="Durham,NC"
             bg="#fcd8b6"
-            heading="Research Assistantship"
-            date="2022-2023"
-            description="Worked as a full-stack software engineering intern. Created a dashboard to help visualize college admission statistics and also wrote deployment pipelines and CI for ease of development!"
+            heading="Systems Research Assistantship"
+            date="2023"
+            description="Worked with Dr. Mathew Lentz and Dr. Danyang Zhou for building mRPC an enhancement of gRPC with a focus on security and performance."
+          />
+          <TimelineElement
+            icon={<CHI src="https://trendup.ai/logo.svg" />}
+            location="Remote"
+            bg="#fcd8b6"
+            heading="Software Engineering Intern - Full Stack"
+            date="2023"
+            description="Worked at TrendUP AI after YC S'23 to help run distrubuted scraping of social media. Created pipelines to vectorize data train LLMs to generate social media contebt."
+          />
+          <TimelineElement
+            icon={
+              <CHI src="https://avatars.slack-edge.com/2020-07-18/1273308828000_0c9f709573c954c074c8_102.png" />
+            }
+            location="Durham, NC"
+            bg="#fcd8b6"
+            heading="Database+NLP Research"
+            date="2024"
+            description="WOrked with Dr. Jun Yang and Dr. Bhuwan Dhingra to create systems to scrape youtube comment and video data. Also made NLP models to classify data as vaccine related to live track misinformation."
+          />
+          <TimelineElement
+            icon={
+              <CHI src="https://m.media-amazon.com/images/I/31epF-8N9LL.png" />
+            }
+            location="Seattle, WA"
+            bg="#fcd8b6"
+            heading="Software Engineering Intern"
+            date="2024"
+            description="Worked at Amazon's retail accessibility team. Managaed scaleable serverless infra, continous pipelines. Built custom UI to run scans and display results. "
           />
         </VerticalTimeline>
         <Heading as="h3" size="2xl">

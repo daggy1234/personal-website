@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import {
   Box,
   Heading,
@@ -11,8 +12,10 @@ import {
   FormLabel,
   Textarea,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { useState } from "react";
 import { FaKeybase } from "react-icons/fa";
 import type { IconType } from "react-icons/lib";
 import { MdEmail } from "react-icons/md";
@@ -71,6 +74,56 @@ const IconWrap = ({ icon, color, url, text }: IconWrapProps) => {
 
 const Contact = () => {
   const bl = useColorModeValue("brand.400", "brand.600");
+  const [loading, SetLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const toast = useToast();
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    SetLoading(true);
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      SetLoading(false);
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Your email has been sent to Arnav",
+          status: "success",
+          duration: 9000,
+        });
+      } else {
+        toast({
+          title: "Failed to send Email!",
+          description: "Your email was not sent to Arnav due to an error.,",
+          status: "error",
+          duration: 9000,
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to send Email!",
+        description: "Your email was not sent to Arnav due to an error.,",
+        status: "error",
+        duration: 9000,
+      });
+    }
+  };
+
   return (
     <Box p={{ base: 1, md: 8 }}>
       <Heading as="h2" size="2xl">
@@ -97,7 +150,7 @@ const Contact = () => {
             text="Discord"
             icon={SiDiscord}
             color="#5865F2"
-            url="https://server.daggy.tech"
+            url="https://server.dag.gy"
           />
           <IconWrap
             text="Keybase"
@@ -129,17 +182,38 @@ const Contact = () => {
           direction="column"
         >
           <Heading size="lg">Contact Form</Heading>
-          <FormControl mb={3} id="email">
-            <FormLabel>Email address</FormLabel>
-            <Input type="email" />
-          </FormControl>
-          <FormControl mb={3} id="message">
-            <FormLabel>Message</FormLabel>
-            <Textarea />
-          </FormControl>
-          <ThemedButton bg="#ffffff" color="rgb(17, 17, 17)">
-            Submit
-          </ThemedButton>
+          <form onSubmit={handleSubmit}>
+            <FormControl mb={3} id="email">
+              <FormLabel>Email address</FormLabel>
+              <Input
+                required
+                name="email"
+                onChange={handleChange}
+                type="email"
+              />
+            </FormControl>
+            <FormControl mb={3} id="subject">
+              <FormLabel>Subject</FormLabel>
+              <Input
+                required
+                name="subject"
+                onChange={handleChange}
+                type="text"
+              />
+            </FormControl>
+            <FormControl mb={3} id="message">
+              <FormLabel>Message</FormLabel>
+              <Textarea name="message" onChange={handleChange} required />
+            </FormControl>
+            <ThemedButton
+              isLoading={loading}
+              type="submit"
+              bg="#ffffff"
+              color="rgb(17, 17, 17)"
+            >
+              Submit
+            </ThemedButton>
+          </form>
         </Flex>
       </Flex>
     </Box>

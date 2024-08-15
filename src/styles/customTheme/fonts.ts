@@ -1,8 +1,15 @@
 import type { DeepPartial, Theme } from "@chakra-ui/react";
 
 const fonts: DeepPartial<Theme["fonts"]> = {
-  body: "Raleway, sans-serif",
-  heading: "Montserrat, serif",
+  heading: "PPNeueMontreal, sans-serif",
+  body: "PPNeueMontreal, sans-serif",
 };
 
-export default fonts;
+const fontWeights: DeepPartial<Theme["fontWeights"]> = {
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+};
+
+export { fonts, fontWeights };

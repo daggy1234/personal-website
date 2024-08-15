@@ -19,12 +19,15 @@ const MenuItem = ({ children }: MenuItemProps) => {
 
 const HeaderTextComponent = ({ text, url }: { text: string; url: string }) => {
   const hc = useColorModeValue("#dee3ed", "#1d1e20");
+  // const bl = useColorModeValue("brand.400", "brand.600");
 
   return (
     <MenuItem>
       <Heading
         _hover={{
           background: `${hc} none repeat scroll 0% 0%`,
+          // border: `0 none ${bl}`,
+          // borderBottom: "5px",
         }}
         padding={2}
         rounded="md"
@@ -44,9 +47,10 @@ interface HeaderProps {
 
 const Header = ({ onOpen }: HeaderProps) => {
   const bl = useColorModeValue("brand.400", "brand.600");
-
   return (
     <Flex
+      mx={8}
+      my={4}
       alignItems="center"
       as="header"
       width="full"
@@ -56,10 +60,11 @@ const Header = ({ onOpen }: HeaderProps) => {
         <Text
           as="span"
           position="relative"
+          mb={1}
           _after={{
             content: "''",
             width: "full",
-            height: "25%",
+            height: "20%",
             position: "absolute",
             bottom: 1,
             left: 0,
@@ -70,7 +75,7 @@ const Header = ({ onOpen }: HeaderProps) => {
           <Link href="/">Daggy1234</Link>
         </Text>
       </Heading>
-      <Box marginLeft="auto">
+      <Box mx={8} marginLeft="auto">
         <Flex alignItems="center" display={{ base: "none", md: "flex" }}>
           <HeaderTextComponent text="home" url="/" />
           <HeaderTextComponent text="about" url="/about" />

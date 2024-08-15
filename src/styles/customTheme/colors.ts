@@ -35,7 +35,9 @@ const extendedColors: DeepPartial<
 };
 
 /** override chakra colors here */
-const overridenChakraColors: DeepPartial<Theme["colors"]> = {};
+const overridenChakraColors: DeepPartial<Theme["colors"]> = {
+  black: "#171717",
+};
 
 const colors = {
   ...overridenChakraColors,

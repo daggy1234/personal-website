@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   Spinner,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 
@@ -52,7 +53,9 @@ const Projects = () => {
       <Box marginTop={5}>
         <Alert variant="left-accent" status="info">
           <AlertIcon />
-          View Featured Projects on the Home Page!
+          <Link href="/#featured-projects">
+            Click here to view Featured Projects on the Home Page!
+          </Link>
         </Alert>
       </Box>
       <SimpleGrid
@@ -85,7 +88,7 @@ const Projects = () => {
             zIndex: -1,
           }}
         >
-          Other Projects
+          Misc Github Stuff
         </Text>
       </Heading>
       <Box my={3}>

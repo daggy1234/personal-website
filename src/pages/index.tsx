@@ -19,6 +19,7 @@ import Link from "next/link";
 import { BiVector } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { FaPython } from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
 import type { IconType } from "react-icons/lib";
 import {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -81,12 +82,12 @@ const Home = () => {
   const isSmall = useBreakpointValue({ base: true, md: false });
   const bl = useColorModeValue("brand.400", "brand.600");
   const textc = useColorModeValue("brand.800", "brand.200");
-
+  // const border = useColorModeValue("#000", "#fff");
   const paatern = useColorModeValue("/Clarence.svg", "/Taieri.svg");
   return (
     <Box>
       <Box
-        height={{ base: "auto", md: "500px" }}
+        height={{ base: "auto", md: "550px" }}
         position="relative"
         backgroundImage={isSmall ? "" : paatern}
         marginY={8}
@@ -95,18 +96,22 @@ const Home = () => {
           backgroundColor={useColorModeValue("bgwhite.100", "bgblack.100")}
           height={{ base: "auto", md: "100%" }}
           borderTopRightRadius={{ base: 0, md: "100%" }}
-          width={{ base: "100%", md: "75%", lg: "65%", xl: "50%" }}
+          width={{ base: "100%", md: "70%", lg: "55%", xl: "45%" }}
         >
           <SomeText />
         </Box>
       </Box>
       <Flex
+        // border={`0 solid ${border}`}
+        // borderTopWidth="2px"
         p={{ base: 5, xl: 20 }}
         marginY={10}
         flexDirection={{ base: "column", md: "row-reverse" }}
       >
         <Box
-          width={{ base: "100%", xl: "70%" }}
+          fontWeight={500}
+          width={{ base: "100%", md: "70%" }}
+          maxW={{ base: "100%", md: "50%" }}
           p={{ base: 0, md: 8 }}
           textAlign={{ base: "left", md: "left" }}
         >
@@ -128,25 +133,48 @@ const Home = () => {
               About Me
             </Text>
           </Heading>
-          <Text marginTop={{ base: 3, md: 5 }} fontSize="xl">
-            Hi I&apos;m Arnav, a Duke Student and an aspiring CS and Econ major.
+          <Text
+            marginTop={{ base: 3, md: 5 }}
+            fontSize="1.4em"
+            lineHeight="1.4em"
+          >
+            Hi I&apos;m Arnav, a Duke Student and a CS-Econ Double major with a
+            Journalism Minor.
           </Text>
-          <Text marginTop={{ base: 3, md: 5 }} fontSize="xl">
-            I&apos;ve lived in cities across India and the US, but currently
-            call Durham,NC and Bangalore home!
+          <Text
+            fontSize="1.4em"
+            lineHeight="1.4em"
+            marginTop={{ base: 1, md: 3 }}
+            // fontSize="xl"
+          >
+            I&apos;ve lived in cities across India and the US, but call Durham
+            and Bangalore home!
           </Text>
-          <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
+          <Text
+            fontSize="1.4em"
+            lineHeight="1.4em"
+            marginTop={{ base: 1, md: 3 }}
+          >
             I mainly started programming as a hobby but after making projects
             and learning through youtube, I&apos;ve grown to adore it!
           </Text>
-          <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
+          <Text
+            fontSize="1.4em"
+            lineHeight="1.4em"
+            marginTop={{ base: 1, md: 3 }}
+          >
             I&apos;m passionate about Financial Technology, Programming language
             Creation, Systems Research, Image Manipulation, Web Development and
             Vector Stores!
           </Text>
-          <Text marginTop={{ base: 1, md: 3 }} fontSize="xl">
-            At home I love reading YA novels, watching Formula1, running my food
-            blog, collecting fountain pens and spending time with family.
+          <Text
+            fontSize="1.4em"
+            lineHeight="1.4em"
+            marginTop={{ base: 1, md: 3 }}
+          >
+            At home I love Cooking, Photography, reading, Formula1, trying new
+            restaurants, DJing, collecting fountain pens and spending time with
+            family.
           </Text>
           <Link href="/about" passHref>
             <ThemedButton top={3}>Read More</ThemedButton>
@@ -162,7 +190,12 @@ const Home = () => {
           />
         </Box>
       </Flex>
-      <Flex direction="column" p={{ base: 1, md: 10, xl: 20 }} marginTop={10}>
+      <Flex
+        id="featured-projects"
+        direction="column"
+        p={{ base: 1, md: 10, xl: 20 }}
+        marginTop={10}
+      >
         <Heading as="h2" size="2xl">
           <Text
             as="span"
@@ -268,13 +301,13 @@ const Home = () => {
             <Tbody>
               <Tr>
                 <Td>Programming Languages </Td>
-                {/* Programming Languages */}
                 <Td flexDirection="row">
                   <Flex>
                     <IconWrapper icon={FaPython} text="Python" />
                     <IconWrapper icon={SiJavascript} text="Javascript" />
                     <IconWrapper icon={SiTypescript} text="Typescript" />
                     <IconWrapper icon={SiRust} text="Rust" />
+                    <IconWrapper icon={FaGolang} text="Golang" />
                     <IconWrapper icon={SiDeno} text="Deno" />
                     <IconWrapper icon={SiSolidity} text="Solidity" />
                     <IconWrapper icon={SiGnubash} text="Bash" />

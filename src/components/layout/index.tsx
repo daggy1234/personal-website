@@ -11,15 +11,16 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  // const border = useColorModeValue("#000", "#fff");
   return (
     <Box
-      margin="0 auto"
       marginX={{ base: 0, md: 8 }}
+      margin="0 auto"
       transition="0.5s ease-out"
     >
-      <Box margin="8">
+      <Box>
         <Header onOpen={onOpen} />
+        {/* <Box border={`0 solid ${border}`} borderBottomWidth="2px" /> */}
         <Drawer isOpen={isOpen} onClose={onClose} />
         <Box as="main" marginY={22}>
           {children}

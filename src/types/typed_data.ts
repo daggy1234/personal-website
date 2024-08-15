@@ -12,6 +12,7 @@ export interface RespositoryData {
   description: string;
   createdAt: string;
   stargazerCount: number;
+  viewerHasStarred: boolean;
   url: string;
   isPrivate: boolean;
   isFork: boolean;

@@ -2,3 +2,31 @@
   font-size: 3em;
   font-weight: 800;
 }
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium is usually 500 weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600; /* SemiBold is often 600 weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Italic.otf") format("opentype");
+  font-weight: normal; /* Normal weight for italic */
+  font-style: italic;
+}

@@ -3,10 +3,11 @@ import { mode } from "@chakra-ui/theme-tools";
 
 import colors from "./colors";
 import { components } from "./components";
-import fonts from "./fonts";
+import { fonts, fontWeights } from "./fonts";
 
 const customTheme = extendTheme({
   fonts,
+  fontWeights,
   colors,
   components,
   styles: {

@@ -1,6 +1,6 @@
 import { BsGithub } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
-// import { FaPython } from "react-icons/fa";
+import { FaAppStoreIos } from "react-icons/fa";
 import type { IconType } from "react-icons/lib";
 import { SiPypi, SiDocker } from "react-icons/si";
 
@@ -22,7 +22,6 @@ interface FeaturedProjectType {
   icons: FeaturedProjectTypeIconType[];
   reversed: boolean;
 }
-
 const FeaturedProjectList: FeaturedProjectType[] = [
   {
     id: 0,
@@ -31,14 +30,13 @@ const FeaturedProjectList: FeaturedProjectType[] = [
     height: 1032,
     width: 1919,
     description:
-      "Dagpi is a SoftwareAsAService API that I'm the CEO and founder of. It features ImageManipulation as a servie with a dashboard. Each user has metrics, and the option to buy a premium service with stripe. Dagpi uses rust, python and typescript. View github for full stack!",
+      "Dagpi is an advanced full-stack SaaS platform specializing in image manipulation with monetization. It combines a next.js frontend, an express.js backend using TypeScript, Python FastAPI for image manipulation, and Actix Rust for auth/metrics, all networked via Docker and Nginx, and monitored with Grafana and Prometheus.",
     images: ["/dagpi_home_w.png", "/dagpi_home_b.png"],
     tags: [
       "python",
       "api",
       "rust",
       "react",
-      "docker",
       "docker",
       "express",
       "linux",
@@ -58,7 +56,7 @@ const FeaturedProjectList: FeaturedProjectType[] = [
         url: "https://dagpi.xyz",
       },
     ],
-    reversed: false,
+    reversed: true,
   },
   {
     id: 1,
@@ -79,37 +77,109 @@ const FeaturedProjectList: FeaturedProjectType[] = [
       {
         id: 1,
         icon: SiPypi,
-        url: "https://pypi.org/polaroid",
-      },
-    ],
-    reversed: true,
-  },
-  {
-    id: 2,
-    alt: "Daggy Food Blog",
-    name: "Food Blog",
-    height: 893,
-    width: 1666,
-    description:
-      "DaggyFoodBlog is my experiment with running a custom blog on the hugo platform. Lots of SEO optimization, Image optimization and performance! Also some great articles",
-    images: ["/foodblog.png", "/foodblog.png"],
-    tags: ["blog", "hugo", "netlify", "html", "js", "css"],
-    icons: [
-      {
-        id: 0,
-        icon: BsGithub,
-        url: "https://github.com/daggy1234/food-blog",
-      },
-      {
-        id: 1,
-        icon: CgWebsite,
-        url: "https://daggy-food-blog.netlify.app",
+        url: "https://pypi.org/project/polaroid/",
       },
     ],
     reversed: false,
   },
   {
+    id: 2,
+    alt: "BlueRide",
+    name: "BlueRide",
+    height: 1024,
+    width: 1820,
+    description:
+      "BlueRide is an iOS app with a TypeScript Express backend that allows people to choose flights they’re taking/leaving by and get algorithmically matched to other people to facilitate carpools.",
+    images: ["/blueride.png", "/blueride.png"],
+    tags: ["ios", "typescript", "express", "algorithm", "carpool"],
+    icons: [
+      {
+        id: 0,
+        icon: BsGithub,
+        url: "https://github.com/hack-duke/rideshare-ios",
+      },
+      {
+        id: 1,
+        icon: BsGithub,
+        url: "https://github.com/hack-duke/rideshare-backend",
+      },
+      {
+        id: 2,
+        icon: FaAppStoreIos,
+        url: "https://apps.apple.com/us/app/blueride-airport-rideshare/id6478838281",
+      },
+    ],
+    reversed: true,
+  },
+  {
     id: 3,
+    alt: "FainAI",
+    name: "FainAI",
+    height: 1024,
+    width: 1820,
+    description:
+      "FainAI dynamically scrapes course lecture website transcripts, slides, textbooks, and more. Trained an LLM and fine-tuned it to teach me algorithms on a FastAPI backend. Built a ChatGPT-like UI to render markdown.",
+    images: ["/fainai.png", "/fainai.png"],
+    tags: ["python", "fastapi", "llm", "scraping", "ml"],
+    icons: [
+      {
+        id: 0,
+        icon: BsGithub,
+        url: "https://github.com/daggy1234/fainai",
+      },
+      {
+        id: 1,
+        icon: CgWebsite,
+        url: "https://fain.dag.gy",
+      },
+    ],
+    reversed: false,
+  },
+  {
+    id: 4,
+    alt: "CryptoBot",
+    name: "CryptoBot",
+    height: 1024,
+    width: 1820,
+    description:
+      "CryptoBot dynamically scrapes and caches real-time crypto pricing data. Built my own cryptocurrency and observability around it to track prices of it and other cryptos. Allows users to have a virtually simulated crypto trading experience with virtual currency being custom cryptocurrency.",
+    images: ["/cryptobot_light.png", "/cryptobot_dark.png"],
+    tags: ["python", "api", "crypto", "websocket", "docker"],
+    icons: [
+      {
+        id: 0,
+        icon: BsGithub,
+        url: "https://github.com/daggy1234/cryptobot",
+      },
+    ],
+    reversed: true,
+  },
+  {
+    id: 5,
+    alt: "SafeMeds",
+    name: "SafeMeds",
+    height: 1024,
+    width: 1820,
+    description:
+      "SafeMeds is a full-stack app featuring a backend that allows users to add drugs they use and get drug interactions based on lifestyle habits. Saves data and dynamically pulls interactions from FDA API.",
+    images: ["/safemeds.jpg", "/safemeds.jpg"],
+    tags: ["python", "api", "healthcare", "database", "fda"],
+    icons: [
+      {
+        id: 0,
+        icon: BsGithub,
+        url: "https://github.com/DukeDifference/SafeMeds",
+      },
+      {
+        id: 1,
+        icon: CgWebsite,
+        url: "https://safe-meds.vercel.app/",
+      },
+    ],
+    reversed: false,
+  },
+  {
+    id: 6,
     alt: "dagbot in discord",
     name: "Dagbot",
     height: 1040,
@@ -137,7 +207,7 @@ const FeaturedProjectList: FeaturedProjectType[] = [
       {
         id: 1,
         icon: CgWebsite,
-        url: "https://dagbot.daggy.tech",
+        url: "https://dagbot.dag.gy",
       },
       {
         id: 2,

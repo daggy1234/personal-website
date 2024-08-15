@@ -5,9 +5,9 @@ import type { EmotionCache } from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "@fontsource/raleway/latin.css";
-import "@fontsource/montserrat/latin.css";
-import "@fontsource/playfair-display/latin.css";
+// import "@fontsource/raleway/latin.css";
+// import "@fontsource/montserrat/latin.css";
+// import "@fontsource/playfair-display/latin.css";
 import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 
@@ -33,7 +33,7 @@ const MyApp = ({
       <ChakraProvider theme={customTheme}>
         <Head>
           <meta
-            name="viewpo`rt"
+            name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
           />
         </Head>

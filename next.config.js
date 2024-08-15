@@ -16,4 +16,7 @@ module.exports = withPWA({
   eslint: {
     dirs: ["src"],
   },
+  experimental: {
+    serverActions: true,
+  },
 });

@@ -26,13 +26,15 @@ const query = `
       repositories(
         first: 100
         orderBy: { field: STARGAZERS, direction: DESC },
-        ownerAffiliations: OWNER
+        ownerAffiliations: OWNER,
+        affiliations: [OWNER]
       ) {
         nodes {
           nameWithOwner
           description
           createdAt
           stargazerCount
+          viewerHasStarred
           url
           isFork
           isPrivate
@@ -46,7 +48,7 @@ const query = `
             url
           }
         }
-      }
+      } 
       repositoriesContributedTo(
         contributionTypes: COMMIT
         first: 100
@@ -56,6 +58,7 @@ const query = `
           description
           createdAt
           nameWithOwner
+          viewerHasStarred
           url
           forkCount
           primaryLanguage {
@@ -71,7 +74,6 @@ const query = `
           }
         }
       }
-      
     }
   }
 `;
@@ -90,7 +92,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     js.repositories.nodes = js.repositories.nodes.filter(
       (repo) =>
         !ExceptionRules.includes(repo.nameWithOwner.toLowerCase()) &&
-        repo.isFork === false
+        repo.isFork === false &&
+        repo.viewerHasStarred === true
     );
     res.status(200).send({ status: true, data: js });
   } else {
