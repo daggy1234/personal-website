@@ -13,8 +13,7 @@
     "format": "prettier --write src",
     "up-latest": "yarn upgrade-interactive --latest",
     "release": "standard-version",
-    "push-release": "git push --follow-tags origin main",
-    "prepare": "husky install"
+    "push-release": "git push --follow-tags origin main"
   },
   "dependencies": {
     "@apollo/client": "^3.4.16",
@@ -54,7 +53,6 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.5",
     "eslint-config-sznm": "^2.0.3",
-    "husky": "^9.1.4",
     "lint-staged": "^15.2.9",
     "next-sitemap": "^4.1.8",
     "prettier": "^3.0.0",
