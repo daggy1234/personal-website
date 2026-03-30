@@ -1,6 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
-
 import colors from "./colors";
 import { components } from "./components";
 import { fonts, fontWeights } from "./fonts";

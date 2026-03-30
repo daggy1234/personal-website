@@ -296,14 +296,6 @@ const About = () => {
             description="Worked with Dr. Mathew Lentz and Dr. Danyang Zhou for building mRPC an enhancement of gRPC with a focus on security and performance."
           />
           <TimelineElement
-            icon={<CHI src="https://trendup.ai/logo.svg" />}
-            location="Remote"
-            bg="#fcd8b6"
-            heading="Software Engineering Intern - Full Stack"
-            date="2023"
-            description="Worked at TrendUP AI after YC S'23 to help run distrubuted scraping of social media. Created pipelines to vectorize data train LLMs to generate social media contebt."
-          />
-          <TimelineElement
             icon={
               <CHI src="https://avatars.slack-edge.com/2020-07-18/1273308828000_0c9f709573c954c074c8_102.png" />
             }

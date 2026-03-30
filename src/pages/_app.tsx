@@ -53,7 +53,7 @@ const MyApp = ({
         `}
         </Script>
         <Script strategy="afterInteractive" id="other-analyitcs">
-          {`if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"daggy1234",utcoffset:"6"}))};sessionStorage.setItem("_swa","1");`}
+          {`try{if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"daggy1234",utcoffset:"6"})).catch(()=>{})};sessionStorage.setItem("_swa","1");}catch(e){}`}
         </Script>
         <Layout>
           <Component {...pageProps} />
@@ -61,10 +61,6 @@ const MyApp = ({
       </ChakraProvider>
     </CacheProvider>
   );
-};
-
-MyApp.defaultProps = {
-  emotionCache: clientSideEmotionCache,
 };
 
 export default MyApp;
