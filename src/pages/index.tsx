@@ -185,7 +185,8 @@ const Home = () => {
             image="/daggy_big.png"
             height={512}
             width={512}
-            alt="Vercel Logo"
+            alt="Arnav Jindal"
+            priority
           />
         </Box>
       </Flex>

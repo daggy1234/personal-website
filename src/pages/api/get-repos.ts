@@ -78,7 +78,15 @@ const query = `
   }
 `;
 
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+let cache: { data: unknown; expiresAt: number } | null = null;
+
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  if (cache && Date.now() < cache.expiresAt) {
+    res.setHeader("X-Cache", "HIT");
+    return res.status(200).send(cache.data);
+  }
+
   const resp = await fetch("https://api.github.com/graphql", {
     method: "POST",
     body: JSON.stringify({ query }),
@@ -95,7 +103,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         repo.isFork === false &&
         repo.viewerHasStarred === true
     );
-    res.status(200).send({ status: true, data: js });
+    const payload = { status: true, data: js };
+    cache = { data: payload, expiresAt: Date.now() + CACHE_TTL_MS };
+    res.setHeader("X-Cache", "MISS");
+    res.status(200).send(payload);
   } else {
     res.status(200).send({ status: false, data: null });
   }

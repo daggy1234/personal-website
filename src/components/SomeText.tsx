@@ -17,6 +17,7 @@ interface IconWrapProps {
   icon: IconType;
   color: string;
   url: string;
+  label: string;
   mouseDown: () => void;
   mouseUp: () => void;
 }
@@ -26,6 +27,7 @@ const IconWrap = ({
   color,
   router,
   url,
+  label,
   mouseDown,
   mouseUp,
 }: IconWrapProps) => {
@@ -33,7 +35,7 @@ const IconWrap = ({
     <Box
       onMouseLeave={mouseUp}
       onMouseEnter={mouseDown}
-      aria-label={icon.toString()}
+      aria-label={label}
       fontSize="2.5em"
       display="inline-block"
       marginRight="1em"
@@ -80,6 +82,7 @@ const SomeText = () => {
           url="https://twitter.com/daggy1234"
           color="#1DA1F2"
           icon={BsTwitter}
+          label="Twitter"
         />
         <IconWrap
           mouseDown={() => SetTextColor("#0e76a8")}
@@ -88,6 +91,7 @@ const SomeText = () => {
           url="https://linkedin.com/in/arnavjindal/"
           color="#0e76a8"
           icon={BsLinkedin}
+          label="LinkedIn"
         />
         <IconWrap
           mouseDown={() => SetTextColor("#FF5700")}
@@ -96,6 +100,7 @@ const SomeText = () => {
           url="https://reddit.com/u/daggy1234"
           color="#FF5700"
           icon={BsReddit}
+          label="Reddit"
         />
         <IconWrap
           mouseDown={() => SetTextColor("")}
@@ -104,6 +109,7 @@ const SomeText = () => {
           url="https://github.com/daggy1234"
           color={useColorModeValue("black", "white")}
           icon={BsGithub}
+          label="GitHub"
         />
       </Flex>
     </Box>

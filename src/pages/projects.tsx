@@ -109,7 +109,7 @@ const Projects = () => {
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               data.data.repositories.nodes.map((value) => (
-                <GithubProject data={value} />
+                <GithubProject key={value.id} data={value} />
               ))
             }
           </Slider>
@@ -151,7 +151,7 @@ const Projects = () => {
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               data.data.repositoriesContributedTo.nodes.map((value) => (
-                <GithubProject data={value} />
+                <GithubProject key={value.id} data={value} />
               ))
             }
           </Slider>

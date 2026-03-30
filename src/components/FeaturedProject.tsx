@@ -107,7 +107,7 @@ const ContentBox = ({
         alignSelf={fa}
       >
         {tags.map((value) => (
-          <Text px={2} display="inline-block" isTruncated>
+          <Text key={value} px={2} display="inline-block" isTruncated>
             {value}
           </Text>
         ))}

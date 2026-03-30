@@ -6,9 +6,6 @@ import { CacheProvider } from "@emotion/react";
 import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-// import "@fontsource/raleway/latin.css";
-// import "@fontsource/montserrat/latin.css";
-// import "@fontsource/playfair-display/latin.css";
 import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 
